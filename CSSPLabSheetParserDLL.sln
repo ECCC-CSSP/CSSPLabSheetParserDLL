@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSSPLabSheetParserDLL", "CSSPLabSheetParserDLL\CSSPLabSheetParserDLL.csproj", "{A6E54418-B988-4814-B0AE-B8932669C9BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSSPLabSheetParserDLLTest", "CSSPLabSheetParserDLLTest\CSSPLabSheetParserDLLTest.csproj", "{BC9E445C-8C08-43B9-8967-F51C173A6367}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6E54418-B988-4814-B0AE-B8932669C9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E54418-B988-4814-B0AE-B8932669C9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E54418-B988-4814-B0AE-B8932669C9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E54418-B988-4814-B0AE-B8932669C9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9E445C-8C08-43B9-8967-F51C173A6367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9E445C-8C08-43B9-8967-F51C173A6367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9E445C-8C08-43B9-8967-F51C173A6367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9E445C-8C08-43B9-8967-F51C173A6367}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
