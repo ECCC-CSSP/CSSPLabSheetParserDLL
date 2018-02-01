@@ -913,8 +913,7 @@ namespace CSSPLabSheetParserDLL.Services
                                                         if (TempFloat == -1)
                                                             continue;
 
-                                                        if (TempFloat >= 0)
-                                                            a1Measurement.Temperature = TempFloat;
+                                                        a1Measurement.Temperature = TempFloat;
                                                     }
                                                 }
                                                 break;
