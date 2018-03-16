@@ -908,9 +908,9 @@ namespace CSSPLabSheetParserDLL.Services
                                                     a1Measurement.Temperature = null;
                                                     if (!string.IsNullOrWhiteSpace(s))
                                                     {
-                                                        float TempFloat = -1;
+                                                        float TempFloat = -99.0f;
                                                         float.TryParse(s, out TempFloat);
-                                                        if (TempFloat == -1)
+                                                        if (TempFloat == -99.0f)
                                                             continue;
 
                                                         a1Measurement.Temperature = TempFloat;
