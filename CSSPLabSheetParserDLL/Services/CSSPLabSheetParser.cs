@@ -60,7 +60,7 @@ namespace CSSPLabSheetParserDLL.Services
             int PosEnd = fileContent.IndexOf("]", PosStart);
 
             if (PosEnd == -1)
-                return "ERR: End ] could not be found for variable " + variableStr +  ".";
+                return "ERR: End ] could not be found for variable " + variableStr + ".";
 
             retStr = fileContent.Substring(PosStart, PosEnd - PosStart);
 
@@ -707,6 +707,61 @@ namespace CSSPLabSheetParserDLL.Services
                 labSheetA1Sheet.ApprovalMonth = VarArr[1].Trim();
                 labSheetA1Sheet.ApprovalDay = VarArr[2].Trim();
 
+            }
+            else
+            {
+                if (labSheetA1Sheet.Version == 2)
+                {
+                    // Daily Duplicate
+                    retStr = GetVariableValueStr("Daily Duplicate", sbFileContent);
+                    if (retStr.StartsWith("ERR:"))
+                    {
+                        labSheetA1Sheet.Error = retStr;
+                        return labSheetA1Sheet;
+                    }
+
+                    VarArr = retStr.Split("|".ToCharArray(), StringSplitOptions.None).ToList();
+
+                    if (VarArr.Count != 3)
+                    {
+                        labSheetA1Sheet.Error = "ERR: Daily Duplicate variable should have 3 values";
+                        return labSheetA1Sheet;
+                    }
+
+                    labSheetA1Sheet.DailyDuplicateRLog = VarArr[0].Trim();
+                    labSheetA1Sheet.DailyDuplicatePrecisionCriteria = VarArr[1].Trim();
+                    labSheetA1Sheet.DailyDuplicateAcceptableOrUnacceptable = VarArr[2].Trim();
+
+                    // Intertech Duplicate
+                    retStr = GetVariableValueStr("Intertech Duplicate", sbFileContent);
+                    if (retStr.StartsWith("ERR:"))
+                    {
+                        labSheetA1Sheet.Error = retStr;
+                        return labSheetA1Sheet;
+                    }
+
+                    VarArr = retStr.Split("|".ToCharArray(), StringSplitOptions.None).ToList();
+
+                    if (VarArr.Count != 3)
+                    {
+                        labSheetA1Sheet.Error = "ERR: Intertech Duplicate variable should have 3 values";
+                        return labSheetA1Sheet;
+                    }
+
+                    labSheetA1Sheet.IntertechDuplicateRLog = VarArr[0].Trim();
+                    labSheetA1Sheet.IntertechDuplicatePrecisionCriteria = VarArr[1].Trim();
+                    labSheetA1Sheet.IntertechDuplicateAcceptableOrUnacceptable = VarArr[2].Trim();
+
+                    // Intertech Read
+                    retStr = GetVariableValueStr("Intertech Read", sbFileContent);
+                    if (retStr.StartsWith("ERR:"))
+                    {
+                        labSheetA1Sheet.Error = retStr;
+                        return labSheetA1Sheet;
+                    }
+
+                    labSheetA1Sheet.IntertechReadAcceptableOrUnacceptable = retStr;
+                }
             }
 
             // Run Weather Comment
