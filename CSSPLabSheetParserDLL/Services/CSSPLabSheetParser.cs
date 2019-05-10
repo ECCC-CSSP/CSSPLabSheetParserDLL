@@ -68,6 +68,9 @@ namespace CSSPLabSheetParserDLL.Services
         }
         public LabSheetA1Sheet ParseLabSheetA1(string LabSheetFileContent)
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-CA");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-CA");
+
             StringBuilder sbPrevCommands = new StringBuilder();
             LabSheetA1Sheet labSheetA1Sheet = new LabSheetA1Sheet() { Error = "" };
             List<string> VarArr = new List<string>();
