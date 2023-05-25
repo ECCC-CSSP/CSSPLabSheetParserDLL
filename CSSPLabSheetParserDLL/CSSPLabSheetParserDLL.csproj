@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSSPLabSheetParserDLL</RootNamespace>
     <AssemblyName>CSSPLabSheetParserDLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -33,12 +33,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSSPEnumsDLL">
-      <HintPath>..\..\CSSPModelsDLL\CSSPModelsDLL\bin\Debug\CSSPEnumsDLL.dll</HintPath>
-    </Reference>
-    <Reference Include="CSSPModelsDLL">
-      <HintPath>..\..\CSSPModelsDLL\CSSPModelsDLL\bin\Debug\CSSPModelsDLL.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -66,6 +60,16 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LabSheetParserRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSSPEnumsDLL\CSSPEnumsDLL\CSSPEnumsDLL.csproj">
+      <Project>{78d59e0e-c66f-4f57-9703-2f69ebe4caa6}</Project>
+      <Name>CSSPEnumsDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSSPModelsDLL\CSSPModelsDLL\CSSPModelsDLL.csproj">
+      <Project>{eb211f77-4987-405d-ad8f-53882f261c33}</Project>
+      <Name>CSSPModelsDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
